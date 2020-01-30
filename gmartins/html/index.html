@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to the IoT Lab!</title>
+<style>
+    body {
+        width: 45em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to the IoT Lab at CDAC/UChicago.</h1>
+<p>The IoT Lab is a place dedicated to studying computer security, 
+privacy, 
+and digital self-defense, 
+but we are also open to serve as a testbed for hacking in general. 
+We have awesome datasets you can use to get started with
+Data Science and Machine Learning.</p>
+
+
+<ul>
+	<li><a href="#idpolicy">1. Lab Policy (Please read this before using the lab)</a></li>
+	<li><a href="#idgetstared">2. Getting Started</a></li>
+	<li><a href="#idworkshop">3. Workshop Material</a></li>
+ 	<li><a href="#idresources">4. List of Resources</a></li>
+ 	<li><a href="#iddatasets">5. List of Datasets</a></li>
+ 	<li><a href="#idapis">6. Local APIs</a></li>
+ 	<li><a href="#idofficehours">7. Office Hours</a></li>
+	<li><a href="#idprojects">8. Projects</a></li>
+</ul>
+<p>
+<h3 id="idpolicy">1. Lab Policy</h3>
+<ul>
+	<li>All the hardware present is the lab should not be taken or leave the room.</li>
+	<li>Please check-in / check-out the area you intend to work.</li>
+	<li>Please check-in / check-out the materials from the lockers.</li>
+	<li>Use the <font color="green">Green</font> / <font color="red">Red</font>
+		signs to mark the status (<font color="green">Free</font> / 
+		<font color="red">Busy</font>) of the area you're using.</li>
+	<li>Do not leave any sensitive data in the computers' storage sdcards.</li>
+	<li>Bring your own sdcard / storage to save your data/work.</li>
+	<li>The sdcards are likely to be reflashed from time to time.</li>
+	<li>Do not run any experiment that can harm lab resources or someone else's work.</li>
+	<li>Please leave the area you checked-in the same way you found it.</li>
+	<li>The Lab is under is a heavy network monitoring / surveillance.</li>
+	<li>Please <u><font color="red">DO NOT install</font></u> any malicious 
+		code at any time or at any circumstances.</li>
+	<li>Please <u><font color="red">DO NOT install</font></u> or run security 
+		experiment without the consent of the lab's supervisor.</li>
+	<li><b>By check-in, you <u>agree</u> with this policy.</b></li>
+</ul>
+</p>
+
+<p>
+<h3 id="idgetstarted">2. Getting Started</h3>
+<ul>
+	<li>The Lab is composed of multiple connected IoT Devices.</li>
+	<li>We have predefined workspaces with connected Single Board Computers (SBCs)</li>
+	<li>You are free to install the required software for your research. You can use the
+		SBCs's default storage as long as you agree and respect the lab 
+		<a href="#idpolicy">policy described in (1)</a>.</li>
+	<li>IoT Lab Network Topology:</li>
+	<li><img src="images/iotnetwork.png" style="width:38em"/></li>
+	<li>192.168.143.0/24 is the local main IoT network.</li>
+	<li>192.168.144.0/24 is an experimental IoT network.</li>
+	<li>Recommended reading:
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</li>
+</ul>
+</p>
+
+<p>
+<h3 id="idworkshop">3. Workshop Material</h3>
+<b>Analyzing .pcap Data</b>
+In this notebook, we're going to analyze the packet capture file .pcap using jupyter, pandas and bokeh. 
+The packet capture was collected from the Samsung Smart Camera inside the lab. There's normal network 
+traffic inside .pcap. During the packet capture, we established 2 video sessions in sequence giving a
+2-minute-ish interval between the 2 sessions.
+
+We'll run cell-by-cell of the jupyter notebook from:
+<br/>
+<br/>
+<a href="https://github.com/chicago-cdac/iotlab/tree/master/gmartins">
+	https://github.com/chicago-cdac/iotlab/tree/master/gmartins
+</a>
+<br/>
+<br/>
+After that, you should re-run the notebook using a capture file you collected using the Wireshark.
+<br/>
+<br/>
+<b>Machine Learning for Networking</b>
+Some exercises forked from Noah Apthorpe's repository for Princeton AI4All IoT project.
+Additional exercises for large-scale Twitter analysis, network performance used in the Cape Town SICSS seminar.
+</br>
+</br>
+<a href="https://github.com/noise-lab/ML-Networking-Primer.git">https://github.com/noise-lab/ML-Networking-Primer.git</a></p>
+
+<p><em>Thank you for coming. The IoT Lab team.</em></p>
+</br>
+
+<p>
+<h3 id="idresources">4. List of Resources</h3>
+<b></b>
+</p>
+
+<p>
+<h3 id="iddatasets">5. List of Datasets</h3>
+<b></b>
+</p>
+
+<p>
+<h3 id="iddatasets">6. Local APIs</h3>
+<b></b>
+</p>
+
+<p>
+<h3 id="iddatasets">7. Office Hours</h3>
+<b>Every Monday 09:00am to 01:00pm</b>
+</p>
+
+<p>
+<h3 id="iddatasets">8. Projects</h3>
+<b></b>
+</p>
+
+<!--p>
+<b>macaddress,tag,input_oui_manufacturer,input_type,input_model,lastseenipaddr,macaddress_bundle_1,macaddress_bundle_2</b></br>
+ec:08:6b:00:00:25,,tp-link,wifi router,ac1750,192.168.143.,,</br>
+38:94:ed:00:00:6c,,netgear,8-port gigabit switch,gs308e,192.168.143.,,</br>
+84:16:f9:00:00:d6,,tp-link,5-port gigabit smart switch,tl-sg105e,192.168.143.,,</br>
+00:04:4b:00:00:c5,mgmt,nvidia,single board computer/sbc,jetson nano,192.168.143.,00:e0:97:00:00:00,</br>
+00:e0:97:00:00:64,mgmt,carrier access corporation,gigabit ethernet dongle,anker usb-to-rj45,10..,00:04:4b:00:00:00,</br>
+00:04:4b:00:00:ab,,nvidia,single board computer/sbc,jetson nano,,00:13:ef:00:00:00,</br>
+00:04:4b:00:00:05,,nvidia,single board computer/sbc,jetson nano,,c8:3a:35:00:00:00,</br>
+bc:f5:ac:00:00:4b,,lg electronics,android phone,google nexus 5,192.168.143.,,</br>
+50:c7:bf:00:00:4c,,tp-link,smart wifi plug,hs-100,192.168.143.,,</br>
+c8:3a:35:00:00:4a,,tenda technology co,wifi dongle/wifi usb adapter,150mbps w311m,192.168.143.,00:04:4b:00:00:00,</br>
+70:2c:1f:00:00:6e,,wisol,refrigerator,samsung rf265b,192.168.143.,,</br>
+dc:a6:32:00:00:3a,,raspberry pi,single board computer/sbc/rpi4,raspberry pi 4,192.168.143.,,</br>
+b8:27:eb:00:00:a1,,raspberry pi foundation,single board computer/sbc/rpi3,raspberry pi3,192.168.143.,,</br>
+00:16:6c:00:00:2d,,samsung,smart camera,snh-p6410bn,192.168.143.,,</br>
+50:f1:4a:00:00:1c,,texas instruments,wireless speaker,bose soundtouch 30,192.168.143.,,</br>
+00:13:ef:00:00:0e,,kingjon digital technology,wifi dongle,rtl8188cus,,00:04:4b:00:00:ab,</br>
+a4:83:e7:00:00:b3,,apple,laptop,macbook pro,192.168.143.,,</br>
+a4:77:33:00:00:6e,,google,home assistance,google home,192.168.143.,,</br>
+7c:d9:5c:00:00:ba,,google,single board computer/sbc,coral board,192.168.143.,7c:d9:5c:b2:97:bb,e8:e8:b7:00:00:00</br>
+7c:d9:5c:00:00:26,,google,single board computer/sbc,coral board,192.168.143.,,e8:e8:b7:00:00:00</br>
+d0:fc:cc:00:00:8e,,samsung,android phone,galaxy j3,192.168.143.,,</br>
+dc:a6:32:00:00:e2,,raspberry pi,single board computer/sbc/rpi4,raspberry pi 4,192.168.143.,,</br>
+4c:ef:c0:00:00:b3,,amazon,home assistance,amazon echo 3nd generation,192.168.143.,,</br>
+00:20:4a:00:00:d7,,ripe ncc,network probe,ripe atlas,192.168.143.,,</br>
+2c:26:17:00:00:7d,,oculus,vr headset,oculus go,192.168.143.,,</br>
+-->
+</body>
+</html>
