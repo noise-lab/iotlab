@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-<h1>Welcome to the IoT Lab at CDAC/UChicago.</h1>
+<h1>Welcome to the IoT Lab at CDAC/UChicago!</h1>
 <p>The IoT Lab is a place dedicated to studying computer security, 
 privacy, 
 and digital self-defense, 
@@ -68,8 +68,6 @@ Data Science and Machine Learning.</p>
 	<li>Recommended reading:
 		<ul>
 			<li></li>
-			<li></li>
-			<li></li>
 		</ul>
 	</li>
 </ul>
@@ -101,41 +99,18 @@ Additional exercises for large-scale Twitter analysis, network performance used 
 </br>
 <a href="https://github.com/noise-lab/ML-Networking-Primer.git">https://github.com/noise-lab/ML-Networking-Primer.git</a></p>
 
-<p><em>Thank you for coming. The IoT Lab team.</em></p>
 </br>
 
 <p>
 <h3 id="idresources">4. List of Resources</h3>
-<b></b>
-</p>
-
-<p>
-<h3 id="iddatasets">5. List of Datasets</h3>
-<b></b>
-</p>
-
-<p>
-<h3 id="iddatasets">6. Local APIs</h3>
-<b></b>
-</p>
-
-<p>
-<h3 id="iddatasets">7. Office Hours</h3>
-<b>Every Monday 09:00am to 01:00pm</b>
-</p>
-
-<p>
-<h3 id="iddatasets">8. Projects</h3>
-<b></b>
-</p>
-
-<!--p>
-<b>macaddress,tag,input_oui_manufacturer,input_type,input_model,lastseenipaddr,macaddress_bundle_1,macaddress_bundle_2</b></br>
+<b>connected_devices.csv</b>
+<code>
+<b>macaddress,tag,input_oui_manufacturer,input_type,input_model,lastseenipaddr,,</b></br>
 ec:08:6b:00:00:25,,tp-link,wifi router,ac1750,192.168.143.,,</br>
 38:94:ed:00:00:6c,,netgear,8-port gigabit switch,gs308e,192.168.143.,,</br>
 84:16:f9:00:00:d6,,tp-link,5-port gigabit smart switch,tl-sg105e,192.168.143.,,</br>
-00:04:4b:00:00:c5,mgmt,nvidia,single board computer/sbc,jetson nano,192.168.143.,00:e0:97:00:00:00,</br>
-00:e0:97:00:00:64,mgmt,carrier access corporation,gigabit ethernet dongle,anker usb-to-rj45,10..,00:04:4b:00:00:00,</br>
+00:04:4b:00:00:c5,,nvidia,single board computer/sbc,jetson nano,192.168.143.,,</br>
+00:e0:97:00:00:64,,carrier access corporation,gigabit ethernet dongle,anker usb-to-rj45,10..,,</br>
 00:04:4b:00:00:ab,,nvidia,single board computer/sbc,jetson nano,,00:13:ef:00:00:00,</br>
 00:04:4b:00:00:05,,nvidia,single board computer/sbc,jetson nano,,c8:3a:35:00:00:00,</br>
 bc:f5:ac:00:00:4b,,lg electronics,android phone,google nexus 5,192.168.143.,,</br>
@@ -156,6 +131,40 @@ dc:a6:32:00:00:e2,,raspberry pi,single board computer/sbc/rpi4,raspberry pi 4,19
 4c:ef:c0:00:00:b3,,amazon,home assistance,amazon echo 3nd generation,192.168.143.,,</br>
 00:20:4a:00:00:d7,,ripe ncc,network probe,ripe atlas,192.168.143.,,</br>
 2c:26:17:00:00:7d,,oculus,vr headset,oculus go,192.168.143.,,</br>
--->
+</code>
+
+<img src="images/iotdevices.png" style="width:38em">
+</p>
+
+<p>
+<h3 id="iddatasets">5. List of Datasets</h3>
+<b></b>
+</p>
+
+<p>
+<h3 id="iddatasets">6. Local APIs</h3>
+<b></b>
+<ul>
+	<li>IP Geolocation (MaxMind powered, only available from inside the lab):</li>
+	<li><i>http://192.168.143.1/geoip/8.8.8.8</i></li>
+	<li><i>http://192.168.143.1/geoip/2001:4860:4860::8888</i></li>
+	<li>
+		<code>
+{"id": 49, "ip": "2001:4860:4860::8888", "is_ipv4": false, "city": "", "state": "", "country": "US", "continent": "North America", "conntype": "", "datecached": "2020-01-18T00:28:58.231Z", "lng": "-97.822000", "lat": "37.751000", "org": "Google", "isp": "Google", "domain": "dns.google", "ASnum": 15169, "ASorg": "Google LLC", "hits": 290}
+		</code>
+	</li>
+</ul>
+</p>
+
+<p>
+<h3 id="iddatasets">7. Office Hours</h3>
+<b>Every Monday 09:00am to 01:00pm</b>
+</p>
+
+<p>
+<h3 id="iddatasets">8. Projects</h3>
+<b></b>
+</p>
+
 </body>
 </html>
