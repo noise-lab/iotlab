@@ -1,0 +1,97 @@
+###
+# File capana.conf.yaml
+# 
+# Default Basic Configuration
+config:
+  snaplen: 1500      # libpcap snapshot length
+  promiscuous: false # libpcap promiscuous mode
+  printstats: true   # print general stats at the end
+  progress: false    # show progress bar
+  output: ./output/  # output directory or .csv file
+
+plugins:
+  - ouimap: modules/macoui_map.so # mac address to manufacturer mapping 
+  - dnsmap: modules/dnsip_map.so # dns query ip address mapping
+  - geoip: modules/geoip_map.so # #geoip mapping
+
+policy:
+  filter:
+    - redirect: others.csv
+      include: [ALLUNMATCHED] #[NTP, IGMPv4]
+    - plugin: geoip
+      include: [TCP, UDP, DNS]
+    - plugin: dnsmap
+      include: [DNS]
+    - plugin: ouimap
+      include: [Ethernet]   
+
+  unmatched: suppress # options are (suppress, redirect)
+  #  - file: other.csv # (redirect unmatched protocols to other.csv)
+  output:
+    - format:
+      - file: [csv] # [csv, json, sql, psql]
+      - granularity: [packet] # [packet, flow, time1sec, time5sec]
+
+capture:
+  - Metadata:
+    - Timestamp:
+    - Length:
+    - CapLen:
+  - Ethernet:
+    - SrcMAC:
+        #- filter: host 00:16:6c:*:*:* #host = SrcMAC OR DstMAC
+        - plugin: ouimap
+    - DstMAC:
+        - plugin: ouimap
+    - EthernetType:
+      #- filter: [IPv4, IPv6]
+    - Length:
+      - filter: < 1500  #not required
+  - IPv4:
+    #- Version:
+    #- IHL:
+    #- TOS:
+    #- Length:
+    #- Id:
+    #- Flags:
+    #- FragOffset:
+    #- TTL:
+    - Protocol:
+      #- filter: [ UDP , TCP ]
+    #- Checksum:
+    - SrcIP:
+      #- filter: 192.168.144.*
+    - DstIP:
+     #- filter: host 10.*.*.* #host = SrcIP or DstIP
+   #- Options:
+   #- Padding:
+  - UDP:
+    #- SrcPort:
+    #- DstPort:
+    - Length:
+   #- Checksum:
+  - TCP:
+    #- SrcPort:
+    #- DstPort:
+    #- Seq:
+    #- Ack:
+    #- DataOffset:
+    #- FIN:
+    #- SYN:
+    #- RST:
+    #- PSH:
+    #- ACK:
+    #- URG:
+    #- ECE:
+    #- CWR:
+    #- NS:
+    #- Window:
+   #- Checksum:
+   #- Urgent:
+   #- Options: #[[]layers.TCPOption] = [TCPOption(NOP:) TCPOption(NOP:) TCPOption(Timestamps:4956/1150338284 0x0000135c4490c4ec)]
+   #- Padding:
+  - Payload:
+    - Length:
+    #- filter: [0,8] # print first 8 bytes max the app payload
+    #- tbd: test
+  
